@@ -2,9 +2,11 @@
   "name": "komh-ts",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.ts",
+    "build": "tsc",
     "api:gen": "openapi-generator-cli generate -i http://192.168.1.17:7766/v3/api-docs/REST%20API -g typescript-fetch -o ./core --skip-validate-spec"
   },
   "keywords": [],
@@ -15,6 +17,7 @@
     "typescript": "^5.3.3"
   },
   "devDependencies": {
-    "@openapitools/openapi-generator-cli": "^2.9.0"
+    "@openapitools/openapi-generator-cli": "^2.9.0",
+    "nodemon": "^3.1.0"
   }
 }
