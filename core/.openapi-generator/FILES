@@ -1,4 +1,3 @@
-.openapi-generator-ignore
 apis/AnnouncementControllerApi.ts
 apis/BookControllerApi.ts
 apis/ClaimControllerApi.ts

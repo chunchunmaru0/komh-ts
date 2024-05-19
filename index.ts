@@ -1,7 +1,7 @@
 import * as dotenv from "dotenv";
 import { BookControllerApi, Configuration, SeriesControllerApi } from "./core";
 import { hentag } from "./src/apis/hentagApi";
-import { patchBook } from "./src/service/patchBook";
+import { patchAllBook } from "./src/service/patchBook";
 dotenv.config();
 
 // const api = new BaseAPI(config);
@@ -19,4 +19,4 @@ dotenv.config();
 //   .then((data) => console.log(data))
 //   .catch((e) => console.log(e));
 
-patchBook();
+patchAllBook();

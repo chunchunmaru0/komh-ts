@@ -37,3 +37,21 @@ export const hentag = async (bookTitle: string): Promise<MangaItem> => {
     throw error;
   }
 };
+
+export const hentagID = async (vaultId: string): Promise<MangaItem> => {
+  const hentagApi = new ApiHandler(`https://hentag.com/`, {});
+  const body = {
+    ids: [vaultId],
+  };
+  console.log(body);
+  try {
+    const result: MangaResponse = await hentagApi.post(
+      "/api/v1/search/vault/id",
+      body
+    );
+    return result[0];
+  } catch (error) {
+    console.log(error);
+    throw error;
+  }
+};

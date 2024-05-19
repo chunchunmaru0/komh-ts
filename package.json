@@ -5,19 +5,22 @@
   "main": "./dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node index.ts",
     "dev": "nodemon index.ts",
     "build": "tsc",
-    "api:gen": "openapi-generator-cli generate -i http://192.168.1.17:7766/v3/api-docs/REST%20API -g typescript-fetch -o ./core --skip-validate-spec"
+    "api:gen": "openapi-generator-cli generate -i https://hentai.kalebhai.com/v3/api-docs/REST%20API -g typescript-fetch -o ./core --skip-validate-spec"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^16.4.5",
-    "typescript": "^5.3.3"
+    "dotenv": "^16.4.5"
   },
   "devDependencies": {
     "@openapitools/openapi-generator-cli": "^2.9.0",
-    "nodemon": "^3.1.0"
+    "@types/node": "^20.12.12",
+    "nodemon": "^3.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
   }
 }
